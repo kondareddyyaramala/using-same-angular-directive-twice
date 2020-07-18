@@ -1,16 +1,17 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[dir]'
+  selector: '[changeContentDir]'
 })
-export class OneDirective {
+export class ChangeContentDirective {
 
-  constructor(private elmRef: ElementRef, private renderer2: Renderer2) { 
-    console.log('Directive Initialized')
+  constructor(private elmRef: ElementRef<HTMLElement>, 
+    private renderer2: Renderer2) { 
   }
 
   ngAfterViewInit(){
-    this.renderer2.setProperty(this.elmRef.nativeElement, 'value', 'New Value');
+    console.log('Children nodes ::: ', this.elmRef.nativeElement.childNodes);
+    this.renderer2.setValue(this.elmRef.nativeElement.childNodes.item(0), 'This is new value');
   }
 
 }

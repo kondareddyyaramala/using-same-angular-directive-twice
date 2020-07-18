@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
-import { OneDirective } from './one.directive';
+import { ChangeContentDirective } from './one.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
-    OneDirective
+    ChangeContentDirective
   ],
   imports: [
     BrowserModule,
