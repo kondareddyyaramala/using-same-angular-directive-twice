@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+  value = 10;
+
   constructor() {
     console.log('This is child component');
    }

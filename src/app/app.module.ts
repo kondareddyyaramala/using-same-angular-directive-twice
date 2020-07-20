@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { ChangeContentDirective } from './one.directive';
+import { SquareDirective } from './square.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
-    ChangeContentDirective
+    ChangeContentDirective,
+    SquareDirective
   ],
   imports: [
     BrowserModule,
